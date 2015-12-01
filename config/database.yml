@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: vote_for_hope_development
+  pool: 5
+  username: BP
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: vote_for_hope_test
+  pool: 5
+  username: BP
+  password:
+
