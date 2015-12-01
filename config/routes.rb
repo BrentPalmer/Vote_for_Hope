@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :charities
+  resources :charges, only: [:new, :create]
 
 end
