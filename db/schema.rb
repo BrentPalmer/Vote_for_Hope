@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20151201115103) do
 
   # These are extensions that must be enabled in order to support this database
@@ -42,6 +43,8 @@ ActiveRecord::Schema.define(version: 20151201115103) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
+    t.string   "customer_id"
+    t.string   "subscription_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

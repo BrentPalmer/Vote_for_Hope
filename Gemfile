@@ -26,6 +26,7 @@ gem 'devise'
 gem 'pg'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'whenever', :require => false
+gem 'stripe'
 
 
 group :development, :test do
