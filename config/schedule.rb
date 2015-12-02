@@ -19,10 +19,10 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every :month do
-  runner "Vote.reset_charity_votes"
-end
+set :output, "#{path}/log/cron.log"
 
 every :month do
   runner "Charity.winner_of_the_month"
+  runner "Vote.reset_charity_votes"
 end
+
