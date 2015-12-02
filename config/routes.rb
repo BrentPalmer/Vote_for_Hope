@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :charges, only: [:new, :create, :destroy]
+  resources :subscriptions, only: [:new, :create, :destroy]
 
 
 end

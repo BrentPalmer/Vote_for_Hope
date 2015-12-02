@@ -1,0 +1,19 @@
+.navbar.navbar-default
+  .container-fluid
+    .navbar-brand
+      Vote for Hope
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          %h4{ style: "margin-top: 15px"}
+            Hello:
+            = current_user.username
+      %ul.nav.narbar-nav.navbar-right
+        %li.pull-right
+          %a{ href: logout_path}
+            Logout
+        - if current_user.customer_id == nil
+          %li.pull-right
+            %a{ href: new_subscription_path}
+              Subscribe
+        

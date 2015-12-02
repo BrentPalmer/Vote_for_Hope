@@ -1,11 +1,16 @@
 .container
   .row
     .col-xs-12
-      %h4
-        Hello: 
-        = current_user.username
-      %h1
+    - if current_user.admin == true
+      %a{ href: new_charity_path}
+        create charity
+      %h1{ style: "text-align: center"}
         All Charities
-      - @charities.each do |charity|
-        %a{ href: charity_path(charity)}
-          = charity.name
+      - @charities.each do |charity| 
+        %a{ href: charity_path(charity), style: "color: #000"}
+          .card{ style: "background-image: url(#{charity.avatar})"}
+            %h3{ style: "text-align: center"}
+              = charity.name
+            %h5{ style: "text-align: center"}
+              votes: 
+              = charity.total_votes

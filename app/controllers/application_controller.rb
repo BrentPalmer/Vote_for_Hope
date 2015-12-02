@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
       redirect_to charities_path
     end
   end
+
 end

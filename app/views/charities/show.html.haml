@@ -1,9 +1,19 @@
 .container
   .row
     .col-xs-12
-      %h1
+      %h1{ style: "text-align: center" }
         = @charity.name
-      %h5
+      %h3{ style: "text-align: center" }
+        Total Votes:
         = @charity.total_votes
+  .row
+    .col-xs-12{style: "height: 200px"}
+      %h5{ style: "text-align: center" }
+        = @charity.mission_statement
+  .row
+    .col-xs-12{style: "height: 200px"}
+      %h5{ style: "text-align: center" }
+        = @charity.description
+    - if current_user.customer_id != nil
       %a{ href: vote_charity_path(@charity, vote: true, user_id: current_user.id), data: { method: 'post'} }
         Vote for this Charity!
