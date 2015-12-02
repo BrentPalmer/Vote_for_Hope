@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     get '/logout' => 'devise/sessions#destroy'
   end
 
-  resources :charities
+  resources :charities do
+    member do
+      post 'vote'
+    end
+  end
 
 end

@@ -25,6 +25,7 @@ gem 'pry'
 gem 'devise'
 gem 'pg'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'whenever', :require => false
 
 
 group :development, :test do

@@ -1,2 +1,9 @@
-%h1
-  Show
+.container
+  .row
+    .col-xs-12
+      %h1
+        = @charity.name
+      %h5
+        = @charity.total_votes
+      %a{ href: vote_charity_path(@charity, vote: true, user_id: current_user.id), data: { method: 'post'} }
+        Vote for this Charity!

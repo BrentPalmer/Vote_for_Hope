@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 20151201115103) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "customer_id"
-    t.string   "subscription_id"
     t.boolean  "admin",                  default: false
   end
 
@@ -52,8 +50,8 @@ ActiveRecord::Schema.define(version: 20151201115103) do
   create_table "votes", force: :cascade do |t|
     t.boolean  "vote"
     t.integer  "user_id"
-    t.integer  "votable_id"
-    t.string   "votable_type"
+    t.integer  "voteable_id"
+    t.string   "voteable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
